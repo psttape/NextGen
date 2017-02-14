@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<head>
+	<title>NextGen</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" >
+	<link rel="stylesheet" type="text/css" href="assets/css/style_control.css" />
+	<link rel="stylesheet" href="fonts/css/font-awesome.min.css">
+	<script type="text/javascript" src="assets/js/microgear.js"></script>
+	<script type="text/javascript" src="assets/js/allfunction.js" ></script>
+</head>
+<body>
+	<header>
+		<div id="mySidenav" class="sidenav">
+  			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  			<p class="menu"> Menu </p>
+  			<a href="index.html"><i class="fa fa-home"></i> Home</a>
+  			<a href="#"><i class="fa fa-gears"></i> Control</a>
+  			<a onclick="loadweb(/*'http://172.20.10.2/graph_index.php'*/'http://www.google.co.th', '_system', 'location=yes'); return false;" ><i class="fa fa-bar-chart-o"></i> Statistic</a>
+  			<a href="information.html">&#x1F6C8;</i> Information</a>
+  			<a href="contact.html"><i class="fa fa-phone"></i> Contact</a>
+		</div>
+		<span id="navbar" style="font-size:20px;cursor:pointer" onclick="openNav()">&#9776;</span>
+	</header>
+<!--End Header-->
+<div id="main">
+	<section class="banner">
+	<div class="banner-inner">
+		<img src="images/Control.png">
+	</div>
+	</section>
+<!--End Banner-->
+	<section class="inner-wrapper1">
+		<h2>Auto Controlling</h2>
+		<h2><button class="buttonOn">On</button>   <button class="buttonOff">Off</button></h2>
+	</section>
+	<section class="inner-wrapper2">
+		<h2>Manual Controlling</h2>
+		<h1><i class="fa fa-asterisk"></i> Fan &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<button class="buttonOn" onClick="Fan_on()">On</button>   <button class="buttonOff" onClick="Fan_off()">Off</button></h>
+
+		<h1><i class="fa fa-lightbulb-o"></i> Light &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<button class="buttonOn" onClick="Light_off()">On</button>   <button class="buttonOff" onClick="Light_off()">Off</button></h1>
+
+		<h1><i class="fa fa-cloud"></i> Mist &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<button class="buttonOn" onClick="Mist_off()">On</button>   <button class="buttonOff" onClick="Mist_off()">Off</button></h1>
+
+		<h1><i class="fa fa-tint"></i> Water&nbsp;&nbsp;&nbsp; &nbsp;
+		<button class="buttonOn" onClick="Water_off()">On</button>   <button class="buttonOff" onClick="Water_off()">Off</button></h1>
+	</section>
+<!--Detail-->
+	<footer>
+		<ul class="social">
+			<li><a onclick="loadweb('http://www.facebook.com','_self')"><i class="fa fa-facebook"></i></a></li>
+			<li><a onclick="loadweb('http://www.google.com','_self')"><i class="fa fa-google-plus"></i></a></li>
+			<li><a onclick="loadweb('http://www.youtube.com','_self')"><i class="fa fa-youtube"></i></a></li>
+	</footer>
+<!--Footer-->
+	<footer class="second">
+	<p>&copy; NextGen </p>
+	</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,155 @@
+@import 'https://fonts.googleapis.com/css?family=Alegreya+sans';
+* {
+	margin: 0;
+	padding: 0;
+	border:	0;
+}
+body {
+	background: #F5F5F5;
+	color:#67727A;
+	font-family:'Alegreya',sans-serif;
+	margin:0;
+}
+h2 {
+	font-size: 250%;
+	font-weight: 700;
+	text-align: center;
+	padding-top: 2%;
+}
+h3 {
+	font-size: 100%;
+	font-weight: 500;
+	text-align: center;
+	padding-bottom: 2%;
+}
+img {
+	max-width: 100%;
+	height: auto;
+	width: auto;
+	margin-bottom: -4px;
+}
+header{
+	background-color: #FFF;
+	width: 100%;
+	height: 55px;
+}
+
+#header-inner{
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+/*---Banner---*/
+.banner{
+	width: 100%;
+}
+.banner-inner{
+	max-width: 1300px;
+	margin: 0 0 0 0;
+	border-bottom: solid 2px;
+	border-color: #DCDCDC;
+}
+/*--- Inner ---*/
+.inner-wrapper1{
+	padding: 10%;
+	background-color: #F7F7F7;
+	border-bottom: solid 2px;
+	border-color: #DCDCDC;
+}
+.inner-wrapper2{
+	padding: 10%;
+	background-color: #FFFFFF;
+	border-bottom: solid 2px;
+	border-color: #DCDCDC;
+}
+.inner-wrapper3{
+	padding: 10%;
+	background-color: #F7F7F7;
+	border-bottom: solid 2px;
+	border-color: #DCDCDC;
+}
+/*--- Footer ---*/
+footer{
+	background-color:#9A9A9A;
+	width: 100%;
+}
+.social {
+	list-style-type: none;
+	text-align: center;
+}
+.social li {
+	display: inline;
+}
+.social i {
+	font-size: 200%;
+	margin:1%;
+	padding: 5% 5% 5% 4%;
+	color: #FFF;
+}
+.social i:hover{
+	color: #FFFFFF;
+}
+footer.second{
+	text-align: center;
+}
+
+
+/*--side nav--*/
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #F5F5F5;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 40px;
+    border-right: 1px solid;
+    border-color: #DCDCDC;
+
+}
+
+.sidenav a {
+    padding: 10px;
+    text-decoration: none;
+    font-size: 80%;
+    color: #818181;
+    display: block;
+    transition: 0.3s
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: #000;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 24px;
+}
+.sidenav .menu {
+    position: absolute;
+    top:17px;
+    left:11px;
+    font-size: 12px;
+}
+
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+#navbar{
+	float: left;
+	padding-left: 20px;
+	padding-top: 15px;
+	font-size: 100px;
+}
+
+#main {
+    transition: margin-left .5s;
+    }

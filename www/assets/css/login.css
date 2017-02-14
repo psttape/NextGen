@@ -1,0 +1,49 @@
+@import 'https://fonts.googleapis.com/css?family=Alegreya+sans';
+* {
+	margin: 0;
+	padding: 0;
+	border:	0;
+}
+body {
+	background: #fff;
+	color:#67727A;
+	font-family:'Alegreya',sans-serif;
+	margin:0;
+}
+h1{
+	font-size: 150%;
+	font-weight: 100;
+	text-align: center;
+	padding-top: 2%;
+}
+form {
+	text-align: center;
+	padding: 5px;
+}
+input{
+	margin: 5px;
+}
+input[type=text] {
+    padding:5px; 
+    border:2px solid #ccc; 
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+input[type=password] {
+    padding:5px; 
+    border:2px solid #ccc; 
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+input[type=button] {
+    padding:5px; 
+    border:2px solid #ccc; 
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+input[type=reset] {
+    padding:5px; 
+    border:2px solid #ccc; 
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
