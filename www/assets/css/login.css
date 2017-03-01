@@ -47,3 +47,6 @@ input[type=reset] {
     -webkit-border-radius: 5px;
     border-radius: 5px;
 }
+.username{
+	padding-top: 150px;
+}
