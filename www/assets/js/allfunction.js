@@ -153,7 +153,7 @@ const APPID     = "Nextgenfarm";
 
 function check(form) { 
                 
-  if(form.userid.value == "next" && form.pswrd.value == "gen") {
+  if(form.userid.value == "Next" && form.pswrd.value == "gen") {
          window.open('index2.html','_self')
           }
   else {
