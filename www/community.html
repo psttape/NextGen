@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>InAppBrowser.addEventListener Example</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" >
+    <link rel="stylesheet" type="text/css" href="assets/css/styleindex.css" />
+    <link rel="stylesheet" href="fonts/css/font-awesome.min.css">
+    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+    <script type="text/javascript" charset="utf-8">
+
+    // Wait for device API libraries to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+    // device APIs are available
+    //
+    function onDeviceReady() {
+         var ref = window.open('http://119.59.125.131/wordpress/', '_blank', 'location=yes');
+         ref.addEventListener('loadstart', function(event) {} );
+         ref.addEventListener('loadstop', function(event) {});
+         ref.addEventListener('loaderror', function(event) { alert('error: ' + event.message); });
+         ref.addEventListener('exit', function(event) {});
+    }
+
+    </script>
+
+  <style>
+    body {
+      background-color: #fFF;
+    }
+    a {
+       font-family:'Alegreya',sans-serif;
+       font-size: 60px;
+       color:#FFF;
+       text-decoration: none
+
+          }
+    a:link{
+      color:#000;
+      text-decoration: none
+    }
+    a:visited{
+      color:#000;
+      text-decoration: none
+    }
+    a:hover{
+      color:#fff;
+
+    }
+    
+  </style>
+  </head>
+  <body>
+  <a href="index.html"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i></i> Back</a>
+  </body>
+</html>
