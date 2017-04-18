@@ -28,6 +28,12 @@ h3 {
 	text-align: center;
 	padding-bottom: 2%;
 }
+h4{
+	font-size: 100%;
+	font-weight: 100;
+	text-align: center;
+	padding-top: 2%;
+}
 img {
 	max-width: 100%;
 	height: auto;
@@ -163,10 +169,10 @@ footer.second{
 
  /*-- On off button --*/
  .buttonOn {
-    background-color: #fff; /* Green */
+    background-color: #27E313; /* Green */
     border: solid #27E313;
     border-radius: 8px;
-    color: #232323;
+    color: #fff;
     padding: 8px 18px;
     text-align: center;
     text-decoration: none;
@@ -175,15 +181,257 @@ footer.second{
     margin: 4px 2px;
     cursor: pointer;
 }
+.buttonOn:hover{
+	background-color: #fff;
+	color: #000;
+}
 .buttonOff {
-    background-color: #fff; /* Red */
+    background-color: #FF1919; /* Red */
     border: solid #FF1919;
-     border-radius: 8px;
-    color: #232323;
+    border-radius: 8px;
+    color: #fff;
     padding: 8px 18px;
     text-align: center;
     display: inline-block;
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
+	font-family:'Alegreya',sans-serif;
 }
+.buttonOff:hover{
+	background-color: #fff;
+	color: #000;
+}
+.buttonInterval {
+    background-color: #DCDCDC; /* Grey */
+    border: solid #FFF;
+    border-radius: 8px;
+    color: #fff;
+    padding: 8px 18px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+	font-family:'Alegreya',sans-serif;
+}
+.buttonInterval:hover{
+	background-color: #fff;
+	color: #000;
+}
+.button1 {
+    background-color: #fff; /* Green */
+    border: solid #FFFFCC	;
+    border-radius: 8px;
+    color: #67727A;
+    padding: 8px 18px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.button1:hover{
+	background-color: #FFFFCC;
+}
+.button2 {
+    background-color: #fff; /* Green */
+    border: solid #FFFF99	;
+    border-radius: 8px;
+    color: #67727A;
+    padding: 8px 18px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.button2:hover{
+	background-color: #FFFF99;
+}
+.button3 {
+    background-color: #fff; /* Green */
+    border: solid #FFFF66	;
+    border-radius: 8px;
+    color: #67727A;
+    padding: 8px 18px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.button3:hover{
+	background-color: #FFFF66;
+}
+.button4 {
+    background-color: #fff; /* Green */
+    border: solid #FFFF33	;
+    border-radius: 8px;
+    color: #67727A;
+    padding: 8px 18px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.button4:hover{
+	background-color: #FFFF33;
+}
+.button5 {
+    background-color: #fff; /* Green */
+    border: solid #FFFF00	;
+    border-radius: 8px;
+    color: #67727A;
+    padding: 8px 18px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.button5:hover{
+	background-color: #FFFF00;
+}
+.select{
+	background-color: #fff; /* Green */
+    border: solid #C0C0C0	;
+    border-radius: 8px;
+    color: #67727A;
+    padding: 5px 14px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.select:hover{
+	background-color: #D3D3D3;
+}
+/*--InputStyle--*/
+input[type=text], select {
+    width: 30%;
+    padding: 4px 10px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    
+    background-color: #fff; /* Red */
+    border: solid #FF1919;
+    border-radius: 8px;
+    color: #67727A;
+    padding: 8px 18px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+	font-family:'Alegreya',sans-serif;
+
+}
+input[type=submit]:hover {
+	background-color: #27E313;
+}
+
+/*--Slidebar--*/
+input[type=range] {
+  -webkit-appearance: none;
+  margin: 10px 0;
+  margin-top: 20px;
+  width: 90%;
+}
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 16px;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: 2px 2px 4px #D1D1D1;
+  background: #F7F7F7;
+  border-radius: 25px;
+  border: 1px solid #E9ECF0;
+}
+input[type=range]::-webkit-slider-thumb {
+  box-shadow: 2px 2px 3px #ABA2A2;
+  border: 1px solid #EDEDED;
+  height: 25px;
+  width: 30px;
+  border-radius: 6px;
+  background: #E8E8E8;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -5.5px;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #F7F7F7;
+}
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 16px;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: 2px 2px 4px #D1D1D1;
+  background: #F7F7F7;
+  border-radius: 25px;
+  border: 1px solid #E9ECF0;
+}
+input[type=range]::-moz-range-thumb {
+  box-shadow: 2px 2px 3px #ABA2A2;
+  border: 1px solid #EDEDED;
+  height: 25px;
+  width: 30px;
+  border-radius: 6px;
+  background: #E8E8E8;
+  cursor: pointer;
+}
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 16px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+  background: #F7F7F7;
+  border: 1px solid #E9ECF0;
+  border-radius: 50px;
+  box-shadow: 2px 2px 4px #D1D1D1;
+}
+input[type=range]::-ms-fill-upper {
+  background: #F7F7F7;
+  border: 1px solid #E9ECF0;
+  border-radius: 50px;
+  box-shadow: 2px 2px 4px #D1D1D1;
+}
+input[type=range]::-ms-thumb {
+  box-shadow: 2px 2px 3px #ABA2A2;
+  border: 1px solid #EDEDED;
+  height: 25px;
+  width: 30px;
+  border-radius: 6px;
+  background: #E8E8E8;
+  cursor: pointer;
+}
+input[type=range]:focus::-ms-fill-lower {
+  background: #F7F7F7;
+}
+input[type=range]:focus::-ms-fill-upper {
+  background: #F7F7F7;
+}
+/*--Slidebar--*/
