@@ -1,19 +1,129 @@
-<html>
-    <head>
-        <title>Login</title>
-        <meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" >
-		<link rel="stylesheet" type="text/css" href="assets/css/login.css" />
-		<link rel="stylesheet" href="fonts/css/font-awesome.min.css">
-		<script type="text/javascript" src="assets/js/allfunction.js" ></script>
-    </head>
-    <body>
-        <h1>Login</h1><p></p>
-        <form name="login">
-            <p class="username">Username<input type="text" name="userid"/>
-            <p></p> Password<input type="password" name="pswrd"/><p></p>
-            <input type="button" onclick="check(this.form)" value="Login"/>
-            <input type="reset" value="Cancel"/>
-        </form>
-    </body>
+<!DOCTYPE html>
+<head>
+	<title>NextGen</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" >
+	<link rel="stylesheet" type="text/css" href="assets/css/styleindex.css" />
+	<link rel="stylesheet" href="fonts/css/font-awesome.min.css">
+	<script type="text/javascript" src="assets/js/allfunction.js" ></script>
+	<script type="text/javascript" src="assets/js/microgear.js"></script>
+
+<script>
+	const APPID     = "garden";
+  	const APPKEY    = "yeWQvmestaWYUZO";
+  	const APPSECRET = "wsXiNFTn7sLN5JjOe5TZZwt7B";
+
+    var microgear = Microgear.create({
+        key: APPKEY,
+        secret: APPSECRET,
+        
+    });
+  
+    
+  microgear.on('message',function(topic,msg){
+  
+    var split_msg = msg.split(",");
+    
+
+      document.getElementById("temp").innerHTML = parseInt(split_msg[0]);
+      document.getElementById("humid").innerHTML = parseInt(split_msg[1]);
+      document.getElementById("soil").innerHTML = parseInt(split_msg[2]);
+      document.getElementById("light").innerHTML = parseInt(split_msg[3]);
+      document.getElementById("water").innerHTML = parseInt(split_msg[4]);
+  });
+   
+   
+    microgear.on('connected', function() {
+
+        microgear.setname('manual_control'); 
+        microgear.subscribe("/node11");
+
+           /* alias can be renamed anytime with this function */
+    
+        
+    });
+
+    microgear.on('present', function(event) {
+        console.log(event);
+    });
+
+    microgear.on('absent', function(event) {
+        console.log(event);
+    });
+    
+    microgear.connect(APPID);
+</script>
+</head>
+
+<body>
+	<header>
+		<div id="mySidenav" class="sidenav">
+  			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  			<p class="menu"> Menu </p>
+  			<a href="index2.html"><i class="fa fa-home"></i>Home</a>
+  			<a href="control.html" ><i class="fa fa-gears"></i>Control</a>
+  			<a href="statistic.html"><i class="fa fa-bar-chart-o"></i>Statistic</a>
+  		
+  			<a href="community.html">Community</a>
+  			
+		</div>
+		<span id="navbar" style="font-size:20px;cursor:pointer" onclick="openNav()">&#9776;</span>
+	</header>
+<!--Header-->
+<div id="main">
+	<section class="banner">
+	<div class="banner-inner">
+		<img src="images/banner.png">
+	</div>
+	</section>
+<!--Banner-->
+	<section class="inner-wrapper1">
+		<h2><i class="fa fa-thermometer-three-quarters">  <a id="temp"></a> C</i></h2>
+		<h3><br>of Temperature</h3>
+	</section>
+	<section class="inner-wrapper2">
+		<h2><i class="fa fa-tint">  <a id="humid"></a> %</i></h2>
+		<h3><br>of Humidity</h3>
+	</section>
+	<section class="inner-wrapper3">
+		<h2><i class="fa fa-tint">  <a id="soil"></a> %</i></h2>
+		<h3><br>of Soil moisture</h3>
+	</section>
+	<section class="inner-wrapper2">
+		<h2><i class="fa fa-sun-o">  <a id="light"></a> Lux</i></h2>
+		<h3><br>of Light intensity</h3>
+	</section>
+	<section class="inner-wrapper3">
+		<h2><i class="fa fa-line-chart">  <a id="water"></a> %</i></h2>
+		<h3><br>of water level</h3>
+	</section>
+<!--Detail-->
+	<footer>
+		<ul class="social">
+			<li><a onclick="loadweb('http://www.facebook.com','_self')"><i class="fa fa-facebook"></i></a></li>
+			<li><a onclick="loadweb('http://www.google.com','_self')"><i class="fa fa-google-plus"></i></a></li>
+			<li><a onclick="loadweb('http://www.youtube.com','_self')"><i class="fa fa-youtube"></i></a></li>
+	</footer>
+<!--Footer-->
+	<footer class="second">
+	<p>&copy; NextGen </p>
+	</footer>
+</div>
+
+  <script type="text/javascript">
+  
+    function onload(){
+      document.addEventListener("deviceready", onDeviceReady, false);
+    }
+    function onDeviceReady() {
+        
+         var ref = window.open('http://apache.org', '_system', 'location=yes');
+         ref.addEventListener('loadstart', function(event) { alert('start: ' + event.url); });
+         ref.addEventListener('loadstop', function(event) { alert('stop: ' + event.url); });
+         ref.addEventListener('loaderror', function(event) { alert('error: ' + event.message); });
+         ref.addEventListener('exit', function(event) { alert(event.type); });
+    }
+  </script>
+</body>
 </html>
+
