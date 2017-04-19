@@ -103,13 +103,13 @@
 
 	/*--AutoControlSet--*/
 	function auto1(){
-		mg1.chat("mg3","auto_control,set1,light_5,waterInterval10")
+		mg1.chat("mg3","auto_1")
 	}
 	function auto2(){
-		mg1.chat("mg3","auto_control,set2,light_3,waterInterval8")
+		mg1.chat("mg3","auto_2")
 	}
 	function auto3(){
-		mg1.chat("mg3","auto_control,set3,light_1,waterInterval6")
+		mg1.chat("mg3","auto_3")
 	}
 
 
@@ -152,7 +152,7 @@
 	function showValue3(newValue){
 		document.getElementById("lightdata_interval").innerHTML=newValue;
 		var light_int = document.getElementById("lightinterval").value;
-		    mg1.chat("mg3","light_interval," + light_int*60000)
+		    mg1.chat("mg3","light_interval," + light_int*1000)
 		 	mg1.chat("mg2","light_interval," + light_int*10) //test
 		}
 
